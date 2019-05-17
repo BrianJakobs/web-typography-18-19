@@ -4,7 +4,7 @@ function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
 		width: 600,
 		height: 400,
-		videoId: '0uSOiu_WUDw',
+		videoId: 'Umc9ezAyJv0',
 		playerVars: {
 			color: 'white'
 			//autoplay: '1'
@@ -16,11 +16,11 @@ function onYouTubeIframeAPIReady() {
 	});
 }
 
-function initialize(){
+function initialize() {
 	// Update the controls on load
 	addSpans();
 }
-function addSpans(){
+function addSpans() {
 	var ps = document.querySelectorAll('#closed-captions p');
 	var i = 0;
 	var regex = /\S+/g;
@@ -53,16 +53,18 @@ function updateTimerDisplay(){
 		sTimes(i,sounds[i],t);
 		i++;
 	}
-
-	if ( t < 136.1) {
+    
+    	if ( t < 174) {
 		setTimeout(() => {
 			updateTimerDisplay();
 		}, 100);
 	}
 	
 }
+
 function pTimes(num,startT,endT,curT) {
 	var curP = document.querySelector('.p' + num);
+    var contain = document.querySelector('#closed-captions');
 	if(curT > endT && !curP.classList.contains('off')) {
 		curP.classList.add('off');
 	}
@@ -71,11 +73,15 @@ function pTimes(num,startT,endT,curT) {
 	}
 	if( curT > startT && !curP.classList.contains('on')) {
 		curP.classList.add('on');
+        contain.classList.add('moveDown' + num);
 	}
 	if( curT < startT && curP.classList.contains('on')) {
 		curP.classList.remove('on');
+        /* de class moveDown heb ik zelf toegevoegd, "+ num" heeft Batuhan geholpen */
+        contain.classList.add('moveDown' + num);
 	}
 }
+
 
 function sTimes(num,soundStarts,curT) {
 	var soundClass = 'sound' + num;
