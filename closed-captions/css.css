@@ -49,9 +49,24 @@ Body Styling
     justify-content: center;
     align-items: center;
     background-color: rgba(10, 18, 28, 1);
+    
+/*
+    background: linear-gradient(270deg, #0a121c, #0a121c, #35a796, #0a121c, #0a121c);
+    background-size: 1000% 1000%;
+    animation: AnimationName 3s ease infinite;
+*/
+    
     height: 70vh;
     width: 100vw;
     padding: 0;
+}
+
+
+/*https://www.gradient-animator.com/*/
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 /*https://stackoverflow.com/questions/11122249/scale-iframe-css-width-100-like-an-image*/
@@ -79,10 +94,26 @@ Body Styling
     height: 100%;
 }
 
+#closed-captions {
+    width: 50%;
+    margin: auto;
+}
+
+@media screen and (max-width: 840px) {
+    #closed-captions {
+        width: 65%;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 640px) {
   .video-area .iframe-ratio {
     width: 90%;
   }
+    #closed-captions {
+        width: 90%;
+        margin: auto;
+    }
 }
 
 .text-area {
@@ -100,35 +131,29 @@ Text Styling
 ========================================
 */
 
-.intercom {
+#closed-captions p.intercom {
     font-family: "Brenner Sans";
     background-color: #6b6b6b;
     font-style: Normal;
     font-weight: 600;
+    text-align: center;
+    align-self: center;
 }
 
-.Leon {
+#closed-captions p.Leon {
     font-family: "Brenner Sans";
     font-style: Normal;
     font-weight: 600;
     background-color: #36a35b;
+    align-self: flex-start;
 }
 
-.Holden {
+#closed-captions p.Holden {
     font-family: "Brenner Sans";
     font-style: Normal;
     font-weight: 800;
     background-color: #3571a7;
     align-self: flex-end;
-}
-
-.knock {
-    font-family: "Brenner Sans";
-    background-color: #6b6b6b;
-    font-style: Normal;
-    font-weight: 600;
-    position: absolute;
-    top: 100px;
 }
 
 /*
@@ -146,6 +171,7 @@ Text Movement
     display: flex;
     flex-direction: column-reverse;
     transform: translateY(-100%);
+    transition: all .3s ease;
 }
 
 div.moveDown0 {
@@ -211,6 +237,180 @@ div.moveDown19 {
 div.moveDown20 {
     transform: translateY(calc(-100% - -21em + 42em + 32.8em));
 }
+div.moveDown21 {
+    transform: translateY(calc(-100% - -22em + 44em + 34.4em));
+}
+div.moveDown22 {
+    transform: translateY(calc(-100% - -23em + 46em + 36em));
+}
+div.moveDown23 {
+    transform: translateY(calc(-100% - -24em + 48em + 37.6em));
+}
+div.moveDown24 {
+    transform: translateY(calc(-100% - -25.3em + 50em + 39.2em));
+}
+div.moveDown25 {
+    transform: translateY(calc(-100% - -26.3em + 52em + 40.8em));
+}
+div.moveDown26 {
+    transform: translateY(calc(-100% - -27.3em + 54em + 42.4em));
+}
+div.moveDown27 {
+    transform: translateY(calc(-100% - -28.3em + 56em + 44em));
+}
+div.moveDown28 {
+    transform: translateY(calc(-100% - -29.3em + 58em + 45.6em));
+}
+div.moveDown29 {
+    transform: translateY(calc(-100% - -30.6em + 60em + 47.2em));
+}
+div.moveDown30 {
+    transform: translateY(calc(-100% - -31.6em + 62em + 48.8em));
+}
+div.moveDown31 {
+    transform: translateY(calc(-100% - -32.6em + 64em + 50.4em));
+}
+div.moveDown32 {
+    transform: translateY(calc(-100% - -33.6em + 66em + 52em));
+}
+div.moveDown33 {
+    transform: translateY(calc(-100% - -34.6em + 68em + 53.6em));
+}
+div.moveDown34 {
+    transform: translateY(calc(-100% - -35.6em + 70em + 55.2em));
+}
+div.moveDown35 {
+    transform: translateY(calc(-100% - -36.9em + 72em + 56.8em));
+}
+div.moveDown36 {
+    transform: translateY(calc(-100% - -37.9em + 74em + 58.4em));
+}
+div.moveDown37 {
+    transform: translateY(calc(-100% - -38.9em + 76em + 60em));
+}
+div.moveDown38 {
+    transform: translateY(calc(-100% - -39.9em + 78em + 61.6em));
+}
+div.moveDown39 {
+    transform: translateY(calc(-100% - -41.2em + 80em + 63.2em));
+}
+div.moveDown40 {
+    transform: translateY(calc(-100% - -42.2em + 82em + 64.8em));
+}
+div.moveDown41 {
+    transform: translateY(calc(-100% - -43.2em + 84em + 66.4em));
+}
+div.moveDown42 {
+    transform: translateY(calc(-100% - -44.2em + 86em + 68em));
+}
+div.moveDown43 {
+    transform: translateY(calc(-100% - -45.2em + 88em + 69.6em));
+}
+div.moveDown44 {
+    transform: translateY(calc(-100% - -46.2em + 90em + 71.2em));
+}
+div.moveDown45 {
+    transform: translateY(calc(-100% - -47.2em + 92em + 72.8em));
+}
+div.moveDown46 {
+    transform: translateY(calc(-100% - -48.2em + 94em + 74.4em));
+}
+div.moveDown47 {
+    transform: translateY(calc(-100% - -49.2em + 96em + 76em));
+}
+div.moveDown48 {
+    transform: translateY(calc(-100% - -50.3em + 98em + 77.6em));
+}
+div.moveDown49 {
+    transform: translateY(calc(-100% - -51.4em + 100em + 79.2em));
+}
+div.moveDown50 {
+    transform: translateY(calc(-100% - -52.4em + 102em + 80.8em));
+}
+div.moveDown51 {
+    transform: translateY(calc(-100% - -53.4em + 104em + 82.4em));
+}
+div.moveDown52 {
+    transform: translateY(calc(-100% - -54.4em + 106em + 84em));
+}
+div.moveDown53 {
+    transform: translateY(calc(-100% - -55.4em + 108em + 85.6em));
+}
+div.moveDown54 {
+    transform: translateY(calc(-100% - -56.4em + 110em + 87.2em));
+}
+div.moveDown55 {
+    transform: translateY(calc(-100% - -57.4em + 112em + 88.8em));
+}
+div.moveDown56 {
+    transform: translateY(calc(-100% - -58.4em + 114em + 90.4em));
+}
+div.moveDown57 {
+    transform: translateY(calc(-100% - -59.4em + 116em + 92em));
+}
+div.moveDown58 {
+    transform: translateY(calc(-100% - -60.5em + 118em + 93.6em));
+}
+div.moveDown59 {
+    transform: translateY(calc(-100% - -61.6em + 120em + 95.2em));
+}
+div.moveDown60 {
+    transform: translateY(calc(-100% - -62.7em + 122em + 96.8em));
+}
+div.moveDown61 {
+    transform: translateY(calc(-100% - -63.8em + 124em + 98.4em));
+}
+div.moveDown62 {
+    transform: translateY(calc(-100% - -64.9em + 126em + 100em));
+}
+div.moveDown63 {
+    transform: translateY(calc(-100% - -66.2em + 128em + 101.6em));
+}
+div.moveDown64 {
+    transform: translateY(calc(-100% - -67.3em + 130em + 103.2em));
+}
+div.moveDown65 {
+    transform: translateY(calc(-100% - -68.4em + 132em + 104.8em));
+}
+div.moveDown66 {
+    transform: translateY(calc(-100% - -69.4em + 134em + 106.4em));
+}
+div.moveDown67 {
+    transform: translateY(calc(-100% - -70.4em + 136em + 108em));
+}
+div.moveDown68 {
+    transform: translateY(calc(-100% - -71.4em + 138em + 109.6em));
+}
+div.moveDown69 {
+    transform: translateY(calc(-100% - -72.4em + 140em + 111.2em));
+}
+div.moveDown70 {
+    transform: translateY(calc(-100% - -73.4em + 142em + 112.8em));
+}
+div.moveDown71 {
+    transform: translateY(calc(-100% - -74.4em + 144em + 114.4em));
+}
+div.moveDown72 {
+    transform: translateY(calc(-100% - -75.4em + 146em + 116em));
+}
+div.moveDown73 {
+    transform: translateY(calc(-100% - -76.4em + 148em + 117.6em));
+}
+div.moveDown74 {
+    transform: translateY(calc(-100% - -77.4em + 150em + 119.2em));
+}
+div.moveDown75 {
+    transform: translateY(calc(-100% - -78.4em + 152em + 120.8em));
+}
+div.moveDown76 {
+    transform: translateY(calc(-100% - -79.4em + 154em + 122.4em));
+}
+div.moveDown77 {
+    transform: translateY(calc(-100% - -80.4em + 156em + 124em));
+}
+div.moveDown78 {
+    transform: translateY(calc(-100% - -81.4em + 158em + 125.6em));
+}
 
 
 /* **********************************************
@@ -228,23 +428,21 @@ Text Animations
 */
 
 #closed-captions p {
-	opacity: 1;
-	transition: .05s;
+	opacity: 0;
 /*	position: relative;*/
-    top: 0;
+/*    top: 0;*/
     color: #fff;
     font-size: 1em;
-    margin: auto;
+/*    margin: auto;*/
     margin-top: 2em;
     padding: .8em 2em;
-    text-align: center;
+/*    text-align: center;*/
 /*    transform: translateY(-5vw);*/
     transition: all .5s;
     border-radius: .4em;
 }
 
 #closed-captions .on {
-    transition: all .3s;
 	opacity: 1;
 }
 
@@ -278,98 +476,119 @@ The first paragraph, with extended timing for
 You probably want to change the styling.
 ********************************************** */
 
-.p18.on span:first-of-type {
+.p11.on span:first-of-type {
+    font-size: 1em;
 	transition: all .3s ease;
 }
-.p18.on span:nth-of-type(5) {
+.p11.on span:nth-of-type(7) {
 	font-size: 0.9em;
 }
-.p18.on span:nth-of-type(6) {
+.p11.on span:nth-of-type(8) {
 	font-size: 0.8em;
 }
-.p18.on span:nth-of-type(7) {
+.p11.on span:nth-of-type(9) {
 	font-size: 0.7em;
 }
-.p18.on span:nth-of-type(8) {
+
+.p17.on span:first-of-type {
+	transition: all .3s ease;
+}
+.p17.on span:nth-of-type(4) {
+	font-size: 0.9em;
+}
+.p17.on span:nth-of-type(5) {
+	font-size: 0.8em;
+}
+.p17.on span:nth-of-type(6) {
+	font-size: 0.7em;
+}
+.p17.on span:nth-of-type(7) {
 	font-size: 0.6em;
 }
-.p18.on span:nth-of-type(9) {
+.p17.on span:nth-of-type(8) {
 	font-size: 0.5em;
 }
 
-.p25.on span:first-of-type {
+.p24.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
     font-family: "Brenner MONO";
     font-style: italic;
 }
-.p25.on span:after {
+.p24.on span:after {
 	content: "?!";
 }
 
-.p30.on span:first-of-type {
+.p29.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
     font-family: "Brenner MONO";
     font-style: italic;
 }
 
-.p34.on span:first-of-type {
+.p33.on span:first-of-type {
     font-size: 1em;
 	transition: all .3s ease;
 }
-.p34.on span:nth-of-type(4) {
+.p33.on span:nth-of-type(4) {
 	font-size: 0.9em;
 }
-.p34.on span:nth-of-type(5) {
+.p33.on span:nth-of-type(5) {
 	font-size: 0.8em;
 }
-.p34.on span:nth-of-type(6) {
+.p33.on span:nth-of-type(6) {
 	font-size: 0.7em;
 }
 
-.p36.on span:first-of-type {
+.p35.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
     font-family: "Brenner MONO";
     font-style: italic;
 }
 
-.p38.on span:first-of-type {
+.p37.on span:first-of-type {
     font-size: 1em;
 	transition: all .3s ease;
-}.p38.on span:nth-of-type(5) {
+}.p37.on span:nth-of-type(5) {
 	font-size: 0.9em;
 }
-.p38.on span:nth-of-type(6) {
+.p37.on span:nth-of-type(6) {
 	font-size: 0.8em;
 }
-.p38.on span:nth-of-type(7) {
+.p37.on span:nth-of-type(7) {
 	font-size: 0.7em;
 }
-.p38.on span:nth-of-type(8) {
+.p37.on span:nth-of-type(8) {
 	font-size: 0.6em;
 }
 
-.p40.on span:first-of-type {
+.p39.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
     font-family: "Brenner MONO";
     font-style: italic;
 }
-.p40.on span:after {
+.p39.on span:after {
 	content: "!";
 }
 
-.p48.on span:first-of-type {
+.p47.on span:first-of-type {
     font-size: 1em;
 	transition: all .3s ease;
 }
-.p48.on span:nth-of-type(3) {
+.p47.on span:nth-of-type(3) {
 	font-size: 0.9em;
 }
-.p48.on span:nth-of-type(4) {
+.p47.on span:nth-of-type(4) {
 	font-size: 0.8em;
+}
+
+.p48.on span:first-of-type {
+	transition: all .3s ease;
+    font-size: 1.1em;
+    font-family: "Brenner MONO";
+    font-style: italic;
 }
 
 .p49.on span:first-of-type {
@@ -379,20 +598,13 @@ You probably want to change the styling.
     font-style: italic;
 }
 
-.p50.on span:first-of-type {
-	transition: all .3s ease;
-    font-size: 1.1em;
-    font-family: "Brenner MONO";
-    font-style: italic;
-}
-
+.p58.on span,
+.p59.on span,
 .p60.on span,
 .p61.on span,
 .p62.on span,
-.p63.on span,
 .p64.on span,
-.p66.on span,
-.p67.on span {
+.p65.on span {
 	transition: all .3s ease;
     font-size: 1.1em;
     font-family: "Brenner Sans Condensed";
@@ -400,7 +612,7 @@ You probably want to change the styling.
     font-weight: 800;
 }
 
-.p65.on span:first-of-type {
+.p63.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
     font-family: "Brenner MONO";
