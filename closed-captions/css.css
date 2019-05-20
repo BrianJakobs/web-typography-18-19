@@ -99,30 +99,71 @@ Body Styling
     margin: auto;
 }
 
-@media screen and (max-width: 840px) {
-    #closed-captions {
-        width: 65%;
-        margin: auto;
-    }
-}
-
-@media screen and (max-width: 640px) {
-  .video-area .iframe-ratio {
-    width: 90%;
-  }
-    #closed-captions {
-        width: 90%;
-        margin: auto;
-    }
-}
-
 .text-area {
     background-color: rgba(25, 35, 50, 1);
     height: 30vh;
     width: 100vw;
     overflow: hidden;
     position: relative;
-    transition: background-color 2s ease-out;
+    transition: background-color 2s ease;
+}
+
+/*
+========================================
+Visual effects
+========================================
+*/
+
+.alarms-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 70vh; 
+}
+
+.alarms:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    position: absolute;
+    left: 0;
+    top: auto;
+}
+
+.alarms:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    position: absolute;
+    right: 0;
+    top: auto;
+}
+
+.alarm-red {
+    margin: 5vh auto;
+    width: 2em;
+    height: 2em;
+    background-color: rgba(99, 4, 4, 1);
+    box-shadow: 0px 0px 15px 1px rgba(0 ,0 ,0 ,1), inset 0px 0px 10px 3px rgba(99, 4, 4, 0.9);
+    border-radius: 50%;
+}
+
+@keyframes biep-rood {
+    0% { 
+        background-color: rgba(99, 4, 4, 1);
+    }
+    50% {
+        background-color: #e81717;
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.5), inset 0px 0px 10px 3px rgba(99,4,4,0.4);
+        
+    }
+    100% {
+        background-color: rgba(99, 4, 4, 1);
+    }
 }
 
 /*
@@ -445,10 +486,12 @@ Text Animations
 #closed-captions .on {
 	opacity: 1;
 }
+/*
 
 #closed-captions .off {
     animation: fade 2s ease forwards;
 }
+*/
 
 .sound0 .video-area #video-placeholder {
     
@@ -634,35 +677,101 @@ Sound Animations
         transform: rotate(0deg);
     }
     16.5% {
-        transform: rotate(5deg);
+        transform: rotate(2deg);
     }
     33% {
         transform: rotate(0deg);
     }
     49.5% {
-        transform: rotate(5deg);
+        transform: rotate(2deg);
     }
     66% {
         transform: rotate(0deg);
     }
     82.5% {
-        transform: rotate(5deg);
+        transform: rotate(2deg);
     }    
     100% {
         transform: rotate(0deg);
     }
 }
 
-.sound1 .text-area {
+.sound2 .alarm-red {
+    animation: biep-rood 4.2s infinite;
+    animation-timing-function: cubic-bezier:(0,.3,1,.7);
+}
+
+.sound5 .text-area {
     background-color: rgba(48, 25, 25, 1);
 }
-.sound1 .video-area {
+.sound5 .video-area {
     background-color: rgba(30, 11, 11, 1);
 }
 
-.sound2 .text-area {
+.sound6 .text-area {
     background-color: rgba(25, 35, 50, 1);
 }
-.sound2 .video-area {
+.sound6 .video-area {
     background-color: rgba(10, 18, 28, 1);
+}
+
+/*
+========================================
+Media Queries
+========================================
+*/
+
+@media screen and (max-width: 840px) {
+    #closed-captions {
+        width: 65%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .video-area .iframe-ratio {
+        width: 90%;
+    }
+    
+    #closed-captions {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .alarms-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .alarms:first-child {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .alarms:last-child {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .alarm-red {
+        width: 2em;
+        height: 2em;
+        background-color: rgba(99, 4, 4, 1);
+        box-shadow: 0px 0px 15px 1px rgba(0 ,0 ,0 ,1), inset 0px 0px 10px 3px rgba(99, 4, 4, 0.9);
+        border-radius: 50%;
+    }
 }
