@@ -69,7 +69,6 @@ captions[47] = ['92.43','93.257'];
 captions[48] = ['93.257','96.481'];
 //captions[49] = ['96.481','98.863'];
 // You know what a turtle is?
-//Hier gebleven
 captions[49] = ['98.863','100.215'];
 captions[50] = ['100.215','101.264'];
 captions[51] = ['101.264','103.256'];

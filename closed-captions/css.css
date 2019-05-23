@@ -44,29 +44,19 @@ Body Styling
 ========================================
 */
 
+body {
+    overflow: hidden; 
+}
+
 .video-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(10, 18, 28, 1);
-    
-/*
-    background: linear-gradient(270deg, #0a121c, #0a121c, #35a796, #0a121c, #0a121c);
-    background-size: 1000% 1000%;
-    animation: AnimationName 3s ease infinite;
-*/
-    
+    background-color: rgba(10, 18, 28, 1);    
     height: 70vh;
     width: 100vw;
     padding: 0;
-}
-
-
-/*https://www.gradient-animator.com/*/
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    transition: background .3s ease;
 }
 
 /*https://stackoverflow.com/questions/11122249/scale-iframe-css-width-100-like-an-image*/
@@ -88,7 +78,7 @@ Body Styling
 
 .iframe-ratio iframe {
     position:absolute;
-    top :0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -97,6 +87,7 @@ Body Styling
 #closed-captions {
     width: 50%;
     margin: auto;
+    z-index: 1;
 }
 
 .text-area {
@@ -106,6 +97,30 @@ Body Styling
     overflow: hidden;
     position: relative;
     transition: background-color 2s ease;
+}
+
+/*https://cssgradient.io/*/
+.Leon-emotion {
+    position: absolute;
+    height: 30vh;
+    width: 50vw;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 237, 211, 1);
+    background: linear-gradient(90deg, rgba(5,237,211,1) 0%, rgba(25,35,50,0) 100%);
+    transform: translateX(-50vw);
+}
+
+/*https://cssgradient.io/*/
+.Holden-emotion {
+    position: absolute;
+    height: 30vh;
+    width: 50vw;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(247, 158, 2, 1);
+    background: linear-gradient(270deg, rgba(247,158,2,1) 0%, rgba(25,35,50,0) 100%);
+    transform: translateX(50vw);
 }
 
 /*
@@ -145,25 +160,11 @@ Visual effects
 
 .alarm-red {
     margin: 5vh auto;
-    width: 2em;
-    height: 2em;
+    width: 5vw;
+    height: 5vw;
     background-color: rgba(99, 4, 4, 1);
     box-shadow: 0px 0px 15px 1px rgba(0 ,0 ,0 ,1), inset 0px 0px 10px 3px rgba(99, 4, 4, 0.9);
     border-radius: 50%;
-}
-
-@keyframes biep-rood {
-    0% { 
-        background-color: rgba(99, 4, 4, 1);
-    }
-    50% {
-        background-color: #e81717;
-        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.5), inset 0px 0px 10px 3px rgba(99,4,4,0.4);
-        
-    }
-    100% {
-        background-color: rgba(99, 4, 4, 1);
-    }
 }
 
 /*
@@ -173,10 +174,10 @@ Text Styling
 */
 
 #closed-captions p.intercom {
-    font-family: "Brenner Sans";
+    font-family: "Brenner MONO";
     background-color: #6b6b6b;
-    font-style: Normal;
-    font-weight: 600;
+    font-style: italic;
+    font-weight: 400;
     text-align: center;
     align-self: center;
 }
@@ -184,15 +185,15 @@ Text Styling
 #closed-captions p.Leon {
     font-family: "Brenner Sans";
     font-style: Normal;
-    font-weight: 600;
+    font-weight: 400;
     background-color: #36a35b;
     align-self: flex-start;
 }
 
 #closed-captions p.Holden {
-    font-family: "Brenner Sans";
+    font-family: "Brenner Slab";
     font-style: Normal;
-    font-weight: 800;
+    font-weight: 600;
     background-color: #3571a7;
     align-self: flex-end;
 }
@@ -470,15 +471,10 @@ Text Animations
 
 #closed-captions p {
 	opacity: 0;
-/*	position: relative;*/
-/*    top: 0;*/
     color: #fff;
     font-size: 1em;
-/*    margin: auto;*/
     margin-top: 2em;
     padding: .8em 2em;
-/*    text-align: center;*/
-/*    transform: translateY(-5vw);*/
     transition: all .5s;
     border-radius: .4em;
 }
@@ -486,29 +482,6 @@ Text Animations
 #closed-captions .on {
 	opacity: 1;
 }
-/*
-
-#closed-captions .off {
-    animation: fade 2s ease forwards;
-}
-*/
-
-.sound0 .video-area #video-placeholder {
-    
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1; 
-    }
-    90% {
-        opacity: 1; 
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 
 /* **********************************************
 The first paragraph, with extended timing for 
@@ -518,6 +491,16 @@ The first paragraph, with extended timing for
 	spoken.
 You probably want to change the styling.
 ********************************************** */
+
+.p0.on span:nth-of-type(3),
+.p0.on span:nth-of-type(4) {
+    font-weight: 800;
+}
+
+.p2.on span:nth-of-type(3),
+.p2.on span:nth-of-type(4) {
+    font-weight: 800;
+}
 
 .p11.on span:first-of-type {
     font-size: 1em;
@@ -531,6 +514,11 @@ You probably want to change the styling.
 }
 .p11.on span:nth-of-type(9) {
 	font-size: 0.7em;
+}
+
+.p14.on span:nth-of-type(3),
+.p14.on span:nth-of-type(4) {
+    font-style: italic;
 }
 
 .p17.on span:first-of-type {
@@ -552,22 +540,41 @@ You probably want to change the styling.
 	font-size: 0.5em;
 }
 
+.p18.on span:nth-of-type(1),
+.p18.on span:nth-of-type(2) {
+    font-weight: 800;
+}
+
+.p21.on span:nth-of-type(1) {
+    font-style: italic;
+}
+
 .p24.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
-    font-family: "Brenner MONO";
+    font-weight: 800;
     font-style: italic;
 }
 .p24.on span:after {
 	content: "?!";
 }
 
+.p25.on span:nth-of-type(1),
+.p25.on span:nth-of-type(2),
+.p25.on span:nth-of-type(3) {
+    font-style: italic;
+}
+
 .p29.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
-    font-family: "Brenner MONO";
+    font-weight: 800;
     font-style: italic;
 }
+
+.p31.on span:nth-of-type(4) {
+    font-style: italic;
+} 
 
 .p33.on span:first-of-type {
     font-size: 1em;
@@ -586,7 +593,7 @@ You probably want to change the styling.
 .p35.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
-    font-family: "Brenner MONO";
+    font-weight: 800;
     font-style: italic;
 }
 
@@ -609,12 +616,17 @@ You probably want to change the styling.
 .p39.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.3em;
-    font-family: "Brenner MONO";
+    font-weight: 800;
     font-style: italic;
 }
 .p39.on span:after {
 	content: "!";
 }
+
+.p40.on span:nth-of-type(1),
+.p40.on span:nth-of-type(2) {
+    font-style: italic;
+} 
 
 .p47.on span:first-of-type {
     font-size: 1em;
@@ -630,15 +642,27 @@ You probably want to change the styling.
 .p48.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.1em;
-    font-family: "Brenner MONO";
-    font-style: italic;
+    font-weight: 800;
 }
 
 .p49.on span:first-of-type {
 	transition: all .3s ease;
     font-size: 1.1em;
-    font-family: "Brenner MONO";
     font-style: italic;
+}
+
+.p50.on span:nth-of-type(1),
+.p50.on span:nth-of-type(2) {
+    font-style: italic;
+}
+
+.p53.on span:nth-of-type(3),
+.p53.on span:nth-of-type(6) {
+    font-style: italic;
+}
+
+.p54.on span:nth-of-type(1) {
+    font-weight: 800;
 }
 
 .p58.on span,
@@ -662,6 +686,23 @@ You probably want to change the styling.
     font-style: italic;
 }
 
+.p66.on span:nth-of-type(2),
+.p66.on span:nth-of-type(3) {
+    font-style: italic;
+}
+
+.p69.on span:nth-of-type(3) {
+    font-style: italic;
+}
+
+.p75.on span:nth-of-type(3) {
+    font-style: italic;
+}
+
+.p76.on span:nth-of-type(2) {
+    font-style: italic;
+}
+
 /*
 ========================================
 Sound Animations
@@ -674,25 +715,25 @@ Sound Animations
 
 @keyframes knock {
     0% {
-        transform: rotate(0deg);
+        transform: translateY(-5%);
     }
     16.5% {
-        transform: rotate(2deg);
+        transform: translateY(5%);
     }
     33% {
-        transform: rotate(0deg);
+        transform: translateY(-5%);
     }
     49.5% {
-        transform: rotate(2deg);
+        transform: translateY(5%);
     }
     66% {
-        transform: rotate(0deg);
+        transform: translateY(-5%);
     }
     82.5% {
-        transform: rotate(2deg);
+        transform: translateY(5%);
     }    
     100% {
-        transform: rotate(0deg);
+        transform: translateY(-5%);
     }
 }
 
@@ -701,18 +742,440 @@ Sound Animations
     animation-timing-function: cubic-bezier:(0,.3,1,.7);
 }
 
-.sound5 .text-area {
+@keyframes biep-rood {
+    0% { 
+        background-color: rgba(99, 4, 4, 1);
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.0), inset 0px 0px 10px 3px rgba(99,4,4,0.0);
+    }
+    5% { 
+        background-color: rgba(99, 4, 4, 1);
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.0), inset 0px 0px 10px 3px rgba(99,4,4,0.0);
+    }
+    10% {
+        background-color: #e81717;
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.8), inset 0px 0px 10px 3px rgba(99,4,4,.8);
+        
+    }
+    60% {
+        background-color: #e81717;
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.8), inset 0px 0px 10px 3px rgba(99,4,4,.8);
+        
+    }
+    65% { 
+        background-color: rgba(99, 4, 4, 1);
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.0), inset 0px 0px 10px 3px rgba(99,4,4,0.0);
+    }
+    100% {
+        background-color: rgba(99, 4, 4, 1);
+        box-shadow: 0px 0px 10px 4px rgba(232,23,23,.0), inset 0px 0px 10px 3px rgba(99,4,4,0.0);
+    }
+}
+
+.sound2 .Leon-emotion {
+    animation: showLeon .5s ease 1 forwards;
+}
+
+.sound2 .Holden-emotion {
+    animation: showHolden .5s ease 1 forwards;
+}
+
+@keyframes showLeon {
+    from {
+        transform: translateX(-50vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes showHolden {
+    from {
+        transform: translateX(50vw);
+    }
+    to {
+        transform: translateX(45vw);
+    }
+}
+
+.sound16 .alarm-red {
+    animation-iteration-count: 0;
+}
+
+.sound16 .text-area {
     background-color: rgba(48, 25, 25, 1);
 }
-.sound5 .video-area {
+
+.sound16 .video-area {
     background-color: rgba(30, 11, 11, 1);
 }
 
-.sound6 .text-area {
+.sound16 .video-area #video-placeholder {
+    animation: heart .16s  alternate ease infinite;
+}
+
+.sound17 .video-area #video-placeholder {
+    animation: heart .16s reverse ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes heart {
+    0% {
+		transform: scale(1);
+        box-shadow: 0px 0px 10px 5px rgba(99, 4, 4, 0.2);
+	}
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 30px 10px rgba(99, 4, 4, 0.6);
+    }
+}
+
+
+.sound17 .alarm-red {
+    animation: biep-rood 4.2s infinite;
+    animation-timing-function: cubic-bezier:(0,.3,1,.7);
+}
+
+.sound17 .text-area {
     background-color: rgba(25, 35, 50, 1);
 }
-.sound6 .video-area {
+.sound17 .video-area {
     background-color: rgba(10, 18, 28, 1);
+}
+
+.sound17 body {
+    background-color: rgba(10, 18, 28, 1);
+}
+
+
+
+.sound5 .Holden-emotion {
+    animation: showHolden4 .5s ease 1 forwards;
+}
+
+@keyframes showHolden4 {
+    from {
+        transform: translateX(45vw);
+    }
+    to {
+        transform: translateX(40vw);
+    }
+}
+
+.sound6 .Holden-emotion {
+    animation: showHolden5 .5s ease 1 forwards;
+}
+
+@keyframes showHolden5 {
+    from {
+        transform: translateX(40vw);
+    }
+    to {
+        transform: translateX(45vw);
+    }
+}
+
+.sound7 .Holden-emotion {
+    animation: showHolden6 .5s ease 1 forwards;
+}
+
+@keyframes showHolden6 {
+    from {
+        transform: translateX(45vw);
+    }
+    to {
+        transform: translateX(40vw);
+    }
+}
+
+.sound9 .Holden-emotion {
+    animation: showHolden7 .5s ease 1 forwards;
+}
+
+@keyframes showHolden7 {
+    from {
+        transform: translateX(40vw);
+    }
+    to {
+        transform: translateX(35vw);
+    }
+}
+
+.sound9 .Leon-emotion {
+    animation: showLeon3 .5s ease 1 forwards;
+}
+
+@keyframes showLeon3 {
+    from {
+        transform: translateX(-0vw);
+    }
+    to {
+        transform: translateX(-5vw);
+    }
+}
+
+.sound10 .Holden-emotion {
+    animation: showHolden8 .5s ease 1 forwards;
+}
+
+@keyframes showHolden8 {
+    from {
+        transform: translateX(35vw);
+    }
+    to {
+        transform: translateX(30vw);
+    }
+}
+
+.sound10 .Leon-emotion {
+    animation: showLeon4 .5s ease 1 forwards;
+}
+
+@keyframes showLeon4 {
+    from {
+        transform: translateX(-5vw);
+    }
+    to {
+        transform: translateX(-15vw);
+    }
+}
+
+.sound11 .Holden-emotion {
+    animation: showHolden9 .5s ease 1 forwards;
+}
+
+@keyframes showHolden9 {
+    from {
+        transform: translateX(30vw);
+    }
+    to {
+        transform: translateX(25vw);
+    }
+}
+
+.sound11 .Leon-emotion {
+    animation: showLeon5 .5s ease 1 forwards;
+}
+
+@keyframes showLeon5 {
+    from {
+        transform: translateX(-15vw);
+    }
+    to {
+        transform: translateX(-20vw);
+    }
+}
+
+.sound12 .Holden-emotion {
+    animation: showHolden10 .5s ease 1 forwards;
+}
+
+@keyframes showHolden10 {
+    from {
+        transform: translateX(25vw);
+    }
+    to {
+        transform: translateX(20vw);
+    }
+}
+
+.sound12 .Leon-emotion {
+    animation: showLeon6 .5s ease 1 forwards;
+}
+
+@keyframes showLeon6 {
+    from {
+        transform: translateX(-20vw);
+    }
+    to {
+        transform: translateX(-25vw);
+    }
+}
+
+.sound13 .Holden-emotion {
+    animation: showHolden11 .5s ease 1 forwards;
+}
+
+@keyframes showHolden11 {
+    from {
+        transform: translateX(20vw);
+    }
+    to {
+        transform: translateX(10vw);
+    }
+}
+
+.sound14 .Holden-emotion {
+    animation: showHolden12 .5s ease 1 forwards;
+}
+
+@keyframes showHolden12 {
+    from {
+        transform: translateX(10vw);
+    }
+    to {
+        transform: translateX(15vw);
+    }
+}
+
+.sound15 .Holden-emotion {
+    animation: showHolden13 .5s ease 1 forwards;
+}
+
+@keyframes showHolden13 {
+    from {
+        transform: translateX(15vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+.sound15 .Leon-emotion {
+    animation: showLeon7 .5s ease 1 forwards;
+}
+
+@keyframes showLeon7 {
+    from {
+        transform: translateX(-25vw);
+    }
+    to {
+        transform: translateX(-30vw);
+    }
+}
+
+.sound16 .Holden-emotion {
+    animation: showHolden14 .5s ease 1 forwards;
+}
+
+@keyframes showHolden14 {
+    from {
+        transform: translateX(0vw);
+    }
+    to {
+        transform: translateX(45vw);
+    }
+}
+
+.sound16 .Leon-emotion {
+    animation: showLeon8 .5s ease 1 forwards;
+}
+
+@keyframes showLeon8 {
+    from {
+        transform: translateX(-30vw);
+    }
+    to {
+        transform: translateX(-50vw);
+    }
+}
+
+.sound18 .iframe-ratio {
+    animation: blur 4s ease forwards;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(0);
+    }
+    50% {
+        filter: blur(1rem);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
+.sound19 .Leon-emotion {
+    animation: showLeon10 .5s ease 1 forwards;
+}
+
+@keyframes showLeon10 {
+    from {
+        transform: translateX(-50vw);
+    }
+    to {
+        transform: translateX(-30vw);
+    }
+}
+
+.sound20 .Holden-emotion {
+    animation: showHolden17 .5s ease 1 forwards;
+}
+
+@keyframes showHolden17 {
+    from {
+        transform: translateX(45vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/filter*/
+.sound20 .video-area,
+.sound20 .ontainer{
+    animation: gun-shot-1 1.5s forwards;
+}
+
+@keyframes gun-shot-1 {
+    0% {
+        background-color: rgba(10, 18, 28, 1);
+        filter: none;
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 1);
+        filter: blur(.3em) brightness(110%) saturate(110%); 
+    }
+    100% {
+        background-color: rgba(10, 18, 28, 1);
+        filter: none;
+    }
+}
+
+.sound20 .Leon-emotion {
+    animation: showLeon11 .5s ease 1 forwards;
+}
+
+@keyframes showLeon11 {
+    from {
+        transform: translateX(-30vw);
+    }
+    to {
+        transform: translateX(-40vw);
+    }
+}
+
+.sound21 .video-area,
+.sound21 .ontainer{
+    animation: gun-shot-2 1s forwards;
+}
+
+@keyframes gun-shot-2 {
+    0% {
+        background-color: rgba(10, 18, 28, 1);
+        filter: none;
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 1);
+        filter: blur(.3em) brightness(110%) saturate(110%); 
+    }
+    100% {
+        background-color: rgba(10, 18, 28, 1);
+        filter: none;
+    }
+}
+
+.sound21 .Leon-emotion {
+    animation: showLeon12 .5s ease 1 forwards;
+}
+
+@keyframes showLeon12 {
+    from {
+        transform: translateX(-40vw);
+    }
+    to {
+        transform: translateX(-45vw);
+    }
 }
 
 /*
@@ -723,7 +1186,7 @@ Media Queries
 
 @media screen and (max-width: 840px) {
     #closed-captions {
-        width: 65%;
+        width: 70%;
         margin: auto;
     }
 }
@@ -734,7 +1197,7 @@ Media Queries
     }
     
     #closed-captions {
-        width: 90%;
+        width: 95%;
         margin: auto;
     }
     
@@ -768,8 +1231,8 @@ Media Queries
     }
 
     .alarm-red {
-        width: 2em;
-        height: 2em;
+        width: 10vw;
+        height: 10vw;
         background-color: rgba(99, 4, 4, 1);
         box-shadow: 0px 0px 15px 1px rgba(0 ,0 ,0 ,1), inset 0px 0px 10px 3px rgba(99, 4, 4, 0.9);
         border-radius: 50%;

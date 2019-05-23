@@ -1,12 +1,11 @@
 # Responsive Typography, 2018/2019
+#### Brian Jakobs 500753523
 
-Als je doof bent, of als je om een andere reden geen geluid kunt horen, dan mis je veel informatie als je een film kijkt. Knisperende voetstappen, langzaam aanzwellende muziek, nerveus getik op een deur, je hoort het natuurlijk allemaal niet. Nu bestaat er zoiets als *closed caption*, wat een type ondertiteling is waarbij ook dingen als omgevingsgeluiden en de muziek beschreven worden. Hierdoor krijgt een kijker die informatie wel binnen.
+Live Preview: [Live Preview](https://brianjakobs.github.io/web-typography-18-19/closed-captions/).
+Filmfragment: [Blade Runner - Voight-Kampff test](https://youtu.be/Umc9ezAyJv0).
+Kort onderzoek: [Dropbox Paper](https://paper.dropbox.com/doc/Webanimation--AdrUduRdZt9Nr3AwEKi8OyqNAQ-RQN1lpkkazV241B30lkJ3)
 
-Alleen wordt die auditieve informatie nogal neutraal beschreven. Het geluid van huilend persoon zou bijvoorbeeld beschreven kunnen worden als *snikgeluid op de achtergrond*. En iemand die lacht zou geschreven kunnen worden als *iemand lacht.* Heel neutraal, bijna zakelijk, en bovendien allebei in precies hetzelfde neutrale lettertype. Terwijl het toch echt over twee heel verschillende emoties gaat. 
-
-Dat kan visueel sterker. 
-
-En dat gaan jullie doen.
+Wanneer je doof bent mis je veel extra informatie als je een film kijkt. Naast wat de acteurs zeggen zijn er namelijk nog allerlei andere hints en informatie stukjes over de sfeer, scene, nadruk, context, etc. die verloren gaan. Volgens Marie van Driessche is het doel van ondertiteling niet per se letterlijk woord voor woord geluiden te vertalen, maar juist de inhoud van het bericht te vertalen zodat een doof persoon dit ook kan begrijpen. Deze gedachten heb ik meegenomen in het ontwerpproces voor dit vak.
 
 ## Leerdoelen
 
@@ -15,45 +14,32 @@ En dat gaan jullie doen.
 - Je kan je typografische keuzes onderbouwen.
 - Je hebt het experiment niet geschuwd
 
-## Typografische restricties
+## Waarom deze scene
 
-Je *moet* kiezen, en je keuze moet je onderbouwen:
+Deze scene van Blade Runner uit 1982 heb ik gekozen in plaats van het gegeven fragment, omdat ik het interessant vond dat dit een gesprek is tussen twee mensen. In tegenstelling tot de gegeven clip zit er in deze scene meer nuance in de stemmen en meer verscholen emoties vanwege de twee totaal verschillende persoonlijkheden.
 
-### Optie 1: Systeemfont
+De scene is een test tussen twee personen. Links een man genaamd ‘Leon’ die getest wordt, rechts zit ‘Holden’ die de test aflegt. Na het bekijken van de scene zonder geluid en met normale ondertiteling kwam ik tot de conclusie dat deze hele scene overkwam als een dood normaal gesprek tussen twee personen, die plotseling op het einde een wending maakt waarna er geschoten wordt. De hele spanning, ergernis en humor valt weg waardoor deze scene geen indruk maakt.
 
-De eerste optie is dat je gebruik maakt van het zogenaamde *systeemfont* van degene die naar jouw werk kijkt. Dit font verschilt per operating system, en het verschilt soms zelfs per versie van het operating system. Het is ook aan te passen door de gebruiker zelf. In dit geval heb je beschikking over normal, **bold** en _italic_.
 
-### Optie 2: Brenner
+## Het verhaal
 
-Je kan er ook voor kiezen om gebruik te maken van de complete Brenner familie. Dit is een zeer uitgebreid en uiterst flexibel font. [Hier kan je je verdiepen in dit font](https://www.typotheque.com/blog/brenner_an_unusual_typeface_family_with_distinct_voices). Als je kiest voor dit font dan heb je de beschikking over een *sans serif*, een *condensed*, een *serif*, een *monotype*, een *slab*, een *display* en een *script* versie. En veel van deze versies hebben varianten van *light* tot *bold*, en allemaal zowel *bold* als *italic*.
+Een van de belangrijkste dingen die verloren gaan zijn de botsende persoonlijkheden van de twee mannen wat juist zorgt voor de spanning. Leon is een simpele man, die een beetje dom over komt, terwijl Holden een rustige man is die serieus de test af wilt leggen. Leon onderbreekt Holden steeds met een domme opmerking, wat Holden aan het begin ziet als een grapje maar al snel op zijn zenuwen begint te werken. Ondanks deze duidelijke frustratie blijft Holden rustig. De scene kent echter een keerpunt waarop Holden er niet meer tegen kan en hij snel en intimiderend de vragen stelt. Leon schrikt hier van en weet niet goed hoe hij moet reageren. Holden kalmeert vervolgens weer en gaat op gepast wijze verder. Leon pakt uit het niets een pistool en begint te schieten op Holden, vervolgens eindigt de scene.
 
-Met Brenner zijn er natuurlijk veel en veel meer mogelijkheden dan met systeemfonts. Dat kan zowel een voordeel als een nadeel zijn.
+## De sfeer
 
-Voor een overzicht, zie [de brenner.pdf](brenner.pdf).
+Er zijn op zich vrij weinig geluiden die voor de sfeer zorgen, er is namelijk geen muziek op de achtergrond. Vanaf het moment dat Leon zit wordt hij aangesloten aan een machine en horen we constant geluidjes van deze machine. Deze geluidjes zijn afleidend en geven de indruk dat dit niet zomaar een gesprek is. Het afkappen van elkaar zorgt voor zowel humor, als opbouwende spanning, doordat de manier van afkappen als storend wordt ervaren door Holden. Tot slot is er een intense sfeer wanneer Holden snel achter elkaar de vragen begint te stellen, waarbij de geluiden van de machine wegvallen en we alleen nog Leons hart horen kloppen.
 
-## Het fragment
+## Het concept
 
-Ik heb een fragment voorbereid. Het gaat om twee scenes uit *Blade Runner 2049*. De captions staan in de HTML, en ze verschijnen in sync met de video. [Kijk maar](closed-captions/index.html).
+De pagina wil ik in tweeën delen, waarbij de bovenste helft, welke meer ruimte inneemt dan de onderste helft, de video bevat. Deze helft zal dienen als een vergroting van de kaders en zal visueel context geluiden bevatten. In het onderste gedeelte zal de ondertiteling in tekst staan. Omdat een groot onderdeel is dat de mannen elkaar afbreken wil ik dat dit goed naar voren komt, om die reden heb ik er voor gekozen om letterlijk de woorden van de ander naar beneden te drukken wanneer de persoon wordt afgekapt. Omdat de ondertiteling te snel verdwijnt blijft de ondertiteling staan en verschuift alles in zijn geheel naar beneden, hierdoor ontstaat er een soort omgekeerde chat. Omdat er soms het beeld van Leon getoond wordt wanneer Holden praat zal ik dit net als een chat onderscheiden met plaatsing en kleur.
 
-### De captions
+De ergernis van Holden en de kalmte van Leon visualiseer ik door een puls licht rechts en links het beeld in te brengen wanneer Holdens irritatie stijgt en Leons kalmte daalt. Hiervoor gebruik ik de contrasterende kleuren blauw en oranje. Wanneer de sfeer intens wordt verander ik de achtergrond kleur van een donkerblauw naar een donkerrood. Ook visualiseer ik de hartslag door de video zelf te laten kloppen inclusief een glow.
 
-De captions staan in de html, in het bestand index.html. Je kan aan elke paragraaf eventueel een of meer classes toevoegen. Bijvoorbeeld `voice1` of `voice2 soft`. Classes voeg je handmatig toe in de html.
+Ook visualiseer ik de machine met brandende lampjes welke afleidend werken. Hierdoor is ten alle tijden die indruk dat alles gemonitord wordt aanwezig. Tot slot gebruik ik een blur filter wanneer het pistool afgaat en wanneer er ‘alien’ achtige muziek afspeelt.
 
-Met JavaScript worden er een paar dingen extra gedaan: 
 
-- er wordt aan elke paragraaf een unieke class toegevoegd (`p0`, `p1`, etc)
-- Elk woord wordt in een aparte `span` gezet. Hierdoor kan je elk woord apart stylen, en eventueel ook [na elkaar laten verschijnen](https://github.com/cmda-minor-vid/web-typography-18-19/blob/master/closed-captions/css.css#L41).
+### De Lettertypes
 
-### Tijdens het afspelen
+Voor Leon gebruik ik Brenner Sans light. Ik heb gekozen voor een sans serif omdat Leon een simpele man is zonder echte verfijning of gecompliceerde gewoontes. Voor holden gebruik ik Brenner Slab omdat in tegenstelling tot Leon, Holden wel verfijnder en intelligenter over komt, daarom heb ik gekozen voor een Slab font, omdat die net tussen een echte serif en sans-serif in zit. Voor de intercom gebruik ik Brenner MONO, omdat deze font het meest lijkt op een computer stem en zo wil het verschil tussen stemmen uit de monden van de acteurs en de stemmen buiten het beeld onderscheiden. Voor woorden waar nadruk op wordt gelegd gebruik ik de italic variant van de font en voor woorden die geschreeuwd worden of waar erg veel nadruk op wordt gelegd gebruik ik bold.
 
-Tijdens het afspeelen wordt er een class `on` op de caption gezet als hij moet verschijnen, en een class `off` als hij klaar is. *Zowel class `on` als class `off` blijft op de caption staan!*
-
-De timimg van de captions kan je aanpassen in [closed-captions/captions.js](closed-captions/captions.js).
-
-Er verschijnen ook classes op de body op momenten dat er geluiden worden afgespeeld, zoals `sound1` en `sound2`. Je kan geluiden toevoegen in [closed-captions/sounds.js](closed-captions/sounds.js).
-
-*let op,* de geluiden zijn niet compleet, dit zal je zelf moeten aanvullen.
-
-## Een eigen fragment
-
-Je kan er ook voor kiezen om een eigen, beter fragment te gebruiken. Je kan dan de nodige HTML en JavaScript genereren door gebruik te maken van [caption generator](https://cmda-minor-vid.github.io/web-typography-18-19/generator/) (in Google Chrome). 
+Wanneer iemand wordt afgekapt visualiseer ik de manier waarop dit wordt gedaan, zo maak ik de woorden kleiner wanneer deze nog gemompeld worden.
