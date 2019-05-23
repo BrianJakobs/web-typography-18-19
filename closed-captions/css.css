@@ -44,8 +44,14 @@ Body Styling
 ========================================
 */
 
-body {
+.overflow {
+    height: 100vh;
+    width: 100vw;
     overflow: hidden; 
+}
+
+.container {
+    overflow: hidden;
 }
 
 .video-area {
@@ -99,11 +105,19 @@ body {
     transition: background-color 2s ease;
 }
 
+.emotions {
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+    bottom: 0;
+    overflow: hidden;
+}
+
 /*https://cssgradient.io/*/
 .Leon-emotion {
     position: absolute;
-    height: 30vh;
-    width: 50vw;
+    height: 100%;
+    width: 50%;
     bottom: 0;
     left: 0;
     background-color: rgba(5, 237, 211, 1);
@@ -114,8 +128,8 @@ body {
 /*https://cssgradient.io/*/
 .Holden-emotion {
     position: absolute;
-    height: 30vh;
-    width: 50vw;
+    height: 100%;
+    width: 50%;
     bottom: 0;
     right: 0;
     background-color: rgba(247, 158, 2, 1);
@@ -453,7 +467,6 @@ div.moveDown77 {
 div.moveDown78 {
     transform: translateY(calc(-100% - -81.4em + 158em + 125.6em));
 }
-
 
 /* **********************************************
 Basic mechanics
@@ -1191,7 +1204,7 @@ Media Queries
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {    
     .video-area .iframe-ratio {
         width: 90%;
     }
@@ -1200,7 +1213,7 @@ Media Queries
         width: 95%;
         margin: auto;
     }
-    
+        
     .alarms-container {
         display: flex;
         flex-direction: column;
@@ -1237,4 +1250,246 @@ Media Queries
         box-shadow: 0px 0px 15px 1px rgba(0 ,0 ,0 ,1), inset 0px 0px 10px 3px rgba(99, 4, 4, 0.9);
         border-radius: 50%;
     }
+}
+
+@media screen and (max-width: 360px) {
+  div.moveDown0 {
+    transform: translateY(calc(-100% - -1em + 2em + 0.8em));
+}
+div.moveDown1 {
+    transform: translateY(calc(-100% - -2em + 4em + 2.4em));
+}
+div.moveDown2 {
+    transform: translateY(calc(-100% - -4em + 6em + 4em));
+}
+div.moveDown3 {
+    transform: translateY(calc(-100% - -5em + 8em + 5.6em));
+}
+div.moveDown4 {
+    transform: translateY(calc(-100% - -7em + 10em + 7.2em));
+}
+div.moveDown5 {
+    transform: translateY(calc(-100% - -8em + 12em + 8.8em));
+}
+div.moveDown6 {
+    transform: translateY(calc(-100% - -10em + 14em + 10.4em));
+}
+div.moveDown7 {
+    transform: translateY(calc(-100% - -12em + 16em + 12em));
+}
+div.moveDown8 {
+    transform: translateY(calc(-100% - -14em + 18em + 13.6em));
+}
+div.moveDown9 {
+    transform: translateY(calc(-100% - -15em + 20em + 15.2em));
+}
+div.moveDown10 {
+    transform: translateY(calc(-100% - -17em + 22em + 16.8em));
+}
+div.moveDown11 {
+    transform: translateY(calc(-100% - -19em + 24em + 18.4em));
+}
+div.moveDown12 {
+    transform: translateY(calc(-100% - -20em + 26em + 20em));
+}
+div.moveDown13 {
+    transform: translateY(calc(-100% - -21em + 28em + 21.6em));
+}
+div.moveDown14 {
+    transform: translateY(calc(-100% - -22em + 30em + 23.2em));
+}
+div.moveDown15 {
+    transform: translateY(calc(-100% - -23em + 32em + 24.8em));
+}
+div.moveDown16 {
+    transform: translateY(calc(-100% - -24em + 34em + 26.4em));
+}
+div.moveDown17 {
+    transform: translateY(calc(-100% - -25em + 36em + 28.8em));
+}
+div.moveDown18 {
+    transform: translateY(calc(-100% - -26em + 38em + 29.6em));
+}
+div.moveDown19 {
+    transform: translateY(calc(-100% - -27em + 40em + 31.2em));
+}
+div.moveDown20 {
+    transform: translateY(calc(-100% - -28em + 42em + 32.8em));
+}
+div.moveDown21 {
+    transform: translateY(calc(-100% - -29em + 44em + 34.4em));
+}
+div.moveDown22 {
+    transform: translateY(calc(-100% - -30em + 46em + 36em));
+}
+div.moveDown23 {
+    transform: translateY(calc(-100% - -31em + 48em + 37.6em));
+}
+div.moveDown24 {
+    transform: translateY(calc(-100% - -32.3em + 50em + 39.2em));
+}
+div.moveDown25 {
+    transform: translateY(calc(-100% - -33.3em + 52em + 40.8em));
+}
+div.moveDown26 {
+    transform: translateY(calc(-100% - -34.3em + 54em + 42.4em));
+}
+div.moveDown27 {
+    transform: translateY(calc(-100% - -35.3em + 56em + 44em));
+}
+div.moveDown28 {
+    transform: translateY(calc(-100% - -36.3em + 58em + 45.6em));
+}
+div.moveDown29 {
+    transform: translateY(calc(-100% - -37.6em + 60em + 47.2em));
+}
+div.moveDown30 {
+    transform: translateY(calc(-100% - -38.6em + 62em + 48.8em));
+}
+div.moveDown31 {
+    transform: translateY(calc(-100% - -39.6em + 64em + 50.4em));
+}
+div.moveDown32 {
+    transform: translateY(calc(-100% - -41.6em + 66em + 52em));
+}
+div.moveDown33 {
+    transform: translateY(calc(-100% - -42.6em + 68em + 53.6em));
+}
+div.moveDown34 {
+    transform: translateY(calc(-100% - -43.6em + 70em + 55.2em));
+}
+div.moveDown35 {
+    transform: translateY(calc(-100% - -44.9em + 72em + 56.8em));
+}
+div.moveDown36 {
+    transform: translateY(calc(-100% - -46.9em + 74em + 58.4em));
+}
+div.moveDown37 {
+    transform: translateY(calc(-100% - -47.9em + 76em + 60em));
+}
+div.moveDown38 {
+    transform: translateY(calc(-100% - -48.9em + 78em + 61.6em));
+}
+div.moveDown39 {
+    transform: translateY(calc(-100% - -50.2em + 80em + 63.2em));
+}
+div.moveDown40 {
+    transform: translateY(calc(-100% - -51.2em + 82em + 64.8em));
+}
+div.moveDown41 {
+    transform: translateY(calc(-100% - -52.2em + 84em + 66.4em));
+}
+div.moveDown42 {
+    transform: translateY(calc(-100% - -54.2em + 86em + 68em));
+}
+div.moveDown43 {
+    transform: translateY(calc(-100% - -55.2em + 88em + 69.6em));
+}
+div.moveDown44 {
+    transform: translateY(calc(-100% - -56.2em + 90em + 71.2em));
+}
+div.moveDown45 {
+    transform: translateY(calc(-100% - -58.2em + 92em + 72.8em));
+}
+div.moveDown46 {
+    transform: translateY(calc(-100% - -60.2em + 94em + 74.4em));
+}
+div.moveDown47 {
+    transform: translateY(calc(-100% - -61.2em + 96em + 76em));
+}
+div.moveDown48 {
+    transform: translateY(calc(-100% - -62.3em + 98em + 77.6em));
+}
+div.moveDown49 {
+    transform: translateY(calc(-100% - -63.4em + 100em + 79.2em));
+}
+div.moveDown50 {
+    transform: translateY(calc(-100% - -64.4em + 102em + 80.8em));
+}
+div.moveDown51 {
+    transform: translateY(calc(-100% - -65.4em + 104em + 82.4em));
+}
+div.moveDown52 {
+    transform: translateY(calc(-100% - -66.4em + 106em + 84em));
+}
+div.moveDown53 {
+    transform: translateY(calc(-100% - -67.4em + 108em + 85.6em));
+}
+div.moveDown54 {
+    transform: translateY(calc(-100% - -69.4em + 110em + 87.2em));
+}    
+div.moveDown55 {
+    transform: translateY(calc(-100% - -70.4em + 112em + 88.8em));
+}
+div.moveDown56 {
+    transform: translateY(calc(-100% - -72.4em + 114em + 90.4em));
+}
+div.moveDown57 {
+    transform: translateY(calc(-100% - -73.4em + 116em + 92em));
+}
+div.moveDown58 {
+    transform: translateY(calc(-100% - -74.5em + 118em + 93.6em));
+}
+div.moveDown59 {
+    transform: translateY(calc(-100% - -75.6em + 120em + 95.2em));
+}
+div.moveDown60 {
+    transform: translateY(calc(-100% - -76.7em + 122em + 96.8em));
+}
+div.moveDown61 {
+    transform: translateY(calc(-100% - -77.8em + 124em + 98.4em));
+}
+div.moveDown62 {
+    transform: translateY(calc(-100% - -78.9em + 126em + 100em));
+}
+
+    
+div.moveDown63 {
+    transform: translateY(calc(-100% - -80.2em + 128em + 101.6em));
+}
+div.moveDown64 {
+    transform: translateY(calc(-100% - -81.3em + 130em + 103.2em));
+}
+div.moveDown65 {
+    transform: translateY(calc(-100% - -82.4em + 132em + 104.8em));
+}
+div.moveDown66 {
+    transform: translateY(calc(-100% - -83.4em + 134em + 106.4em));
+}
+div.moveDown67 {
+    transform: translateY(calc(-100% - -84.4em + 136em + 108em));
+}
+div.moveDown68 {
+    transform: translateY(calc(-100% - -85.4em + 138em + 109.6em));
+}
+div.moveDown69 {
+    transform: translateY(calc(-100% - -86.4em + 140em + 111.2em));
+}
+div.moveDown70 {
+    transform: translateY(calc(-100% - -88.4em + 142em + 112.8em));
+}
+div.moveDown71 {
+    transform: translateY(calc(-100% - -89.4em + 144em + 114.4em));
+}
+div.moveDown72 {
+    transform: translateY(calc(-100% - -90.4em + 146em + 116em));
+}
+div.moveDown73 {
+    transform: translateY(calc(-100% - -91.4em + 148em + 117.6em));
+}
+div.moveDown74 {
+    transform: translateY(calc(-100% - -92.4em + 150em + 119.2em));
+}
+div.moveDown75 {
+    transform: translateY(calc(-100% - -93.4em + 152em + 120.8em));
+}
+div.moveDown76 {
+    transform: translateY(calc(-100% - -94.4em + 154em + 122.4em));
+}
+div.moveDown77 {
+    transform: translateY(calc(-100% - -95.4em + 156em + 124em));
+}
+div.moveDown78 {
+    transform: translateY(calc(-100% - -96.4em + 158em + 125.6em));
+}  
 }
